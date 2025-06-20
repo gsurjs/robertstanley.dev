@@ -1,79 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Work In Progress!!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 20px auto;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    p {
-      margin-bottom: 1em;
-    }
-    ol {
-      padding-left: 20px;
-    }
-    a {
-      margin-right: 10px;
-    }
-    .share-links {
-      text-align: center;
-      margin-top: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Stanley - GSU Computer Science Student</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body bgcolor="#c7e0f5">
-  <br></br>
-  <img src="images/image1.jpg" alt="headshot" width="50%">
-	<a name=middle>
-  <h1>Robert John Stanley</h1></a>
-  <h3>B.S. Computer Science at Georgia State University</h3>
-  <b><i>Go Panthers!</b></i>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/image1.jpg" alt="Robert John Stanley - Headshot" class="profile-image">
+            <h1>Robert John Stanley</h1>
+            <h2>B.S. <span class="highlight">Computer Science</span> at <span class="highlight">Georgia State</span> University</h2>
+            <p class="tagline"><em>Go Panthers!</em></p>
+        </div>
+    </header>
 
-  <p><strong>Welcome Everyone!</strong><br>About Me:</p>
+    <main class="container">
+        <section class="about-section">
+            <h2>Welcome Everyone!</h2>
+            <p><strong>About Me:</strong></p>
+            <p>I'm currently working as an Undergraduate Research Assistant at GSU's Collaborative Human AI Center while also serving as a Field Product Guide at Rivian. I love the challenge of turning complex ideas into practical solutions that actually make a difference!</p>
+            <p>My research interests center on Human-Robot Interaction, VR/AR, Edge Computing, and building AI systems that people can trust. I'm particularly drawn to projects where cutting-edge technology meets real human needs.</p>
+        </section>
 
+        <section class="assignments-section">
+            <h2>Class Assignments & Projects</h2>
+            <div class="class-work-container">
+                <div class="assignments-column">
+                    <h3>Assignments</h3>
+                    <table class="zebra-table">
+                        <thead>
+                            <tr>
+                                <th>Assignment</th>
+                                <th>Description</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Assignment 1</td>
+                                <td>Personal Homepage</td>
+                                <td><a href="homepage">Coming Soon</a></td>
+                            </tr>
+                            <tr>
+                                <td>Assignment 2</td>
+                                <td>Movie Review</td>
+                                <td><a href="movie-review">Coming Soon</a></td>
+                            </tr>
+                            <tr>
+                                <td>Assignment 3</td>
+                                <td>PHP NerdLuv</td>
+                                <td><a href="phpNerdLuv">Coming Soon</a></td>
+                            </tr>
+                            <tr>
+                                <td>Assignment 4</td>
+                                <td>Full Stack Application</td>
+                                <td><a href="fullstack">Coming Soon</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="projects-column">
+                    <h3>Class Projects</h3>
+                    <table class="zebra-table">
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Technologies</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSS HTML & PHP</td>
+                                <td>HTML5, CSS3, PHP</td>
+                                <td><a href="#">Coming Soon</a></td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>JavaScript, DOM</td>
+                                <td><a href="#">Coming Soon</a></td>
+                            </tr>
+                            <tr>
+                                <td>Final Project</td>
+                                <td>Full Stack Web App</td>
+                                <td><a href="#">Coming Soon</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
+        <section class="projects-section">
+            <h2>Personal Projects</h2>
+            <div class="project-highlight">
+                <img src="images/image3.jpg" alt="SPOT Facial Recognition Model" class="project-image">
+                <div class="project-content">
+                    <h3>Spot: Cognitive Companion</h3>
+                    <p>An AI-powered robotic assistant designed to enhance human-robot interactions by integrating dynamic AI capabilities, user recognition, and environmental awareness. This project leverages facial recognition, large language models, and vision language models to create a more interactive and intelligent robotic assistant.</p>
+                    <a href="https://github.com/gsurjs/SpotAI" class="project-link">View Project on GitHub</a>
+                </div>
+            </div>
 
-  <p>I'm currently working as an Undergraduate Research Assistant at GSU's Collaborative Human AI Center while also serving as a Field Product Guide at Rivian. I love the challenge of turning complex ideas into practical solutions that actually make a difference!</p>
+            <div class="other-projects">
+                <h3>Other Personal Projects</h3>
+                <ol class="project-list">
+                    <li><a href="https://github.com/gsurjs/Reddit_OverlApp">Reddit OverlApp</a> - A Python tool that analyzes the overlap of active users between different subreddits. This tool helps you find common Redditors between communities, assisting in networking opportunities.</li>
+                    <li><a href="https://vinny-virtuoso.vercel.app/">Virtuoso</a> - A clean, minimalist website for Vinny Virtuoso, an independent hip-hop artist based in Atlanta. The site features a minimalist, futuristic aesthetic that reflects Vinny's unique sound.</li>
+                </ol>
+            </div>
+        </section>
 
-  <p>My research interests center on Human-Robot Interaction, VR/AR, Edge Computing, and building AI systems that people can trust. I'm particularly drawn to projects where cutting-edge technology meets real human needs.</p>
+        <section class="interests-section">
+            <div class="two-column">
+                <div class="column">
+                    <h3>Hobbies & Interests</h3>
+                    <ul>
+                        <li>Restoring/Fixing Electronics</li>
+                        <li>Collecting Sneakers and Vinyl</li>
+                        <li>Building PCs</li>
+                        <li>Competitive Video Games</li>
+                        <li>Road Bike Cycling</li>
+                        <li>Crafting Espresso Beverages</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Top 5 Favorite Albums</h3>
+                    <ul>
+                        <li>Are You Experienced - Jimi Hendrix</li>
+                        <li>Enter the Wu-Tang (36 Chambers) - Wu-Tang Clan</li>
+                        <li>Nevermind - Nirvana</li>
+                        <li>Outer Peace - Toro Y Moi</li>
+                        <li>In Rainbows - Radiohead</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <img src="images/image2.jpg" alt="SPOT Facial Recognition Model">
+        <section class="education-career">
+            <div class="nested-lists">
+                <div class="education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><span class="highlight">Georgia State</span> University - B.S. <span class="highlight">Computer Science</span> (Current)</li>
+                        <li>Relevant Coursework: Data Structures, Algorithms, Web Programming, Database Systems</li>
+                        <li>GPA: 3.8</li>
+                    </ul>
+                </div>
+                <div class="career">
+                    <h3>Top 3 Dream Jobs</h3>
+                    <ol>
+                        <li>Senior Software Engineer at Rivian</li>
+                        <li>AI Research Scientist at Google DeepMind</li>
+                        <li>Robotics Engineer at Boston Dynamics</li>
+                        <li><a href="#resume">View My Resume</a></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
 
-  <p>Spot: Cognitive Companion is an AI-powered robotic assistant designed to enhance human-robot interactions by integrating dynamic AI capabilities, user recognition, and environmental awareness. This project leverages facial recognition, large language models, and vision language models to create a more interactive and intelligent robotic assistant.</p>
-  <p><a href="https://github.com/gsurjs/SpotAI">Link to My Current Spot AI Project</a></p>
+        <section class="quote-section">
+            <div class="quote-container">
+                <blockquote>
+                    "The best way to predict the future is to invent it."
+                    <cite>- Alan Kay</cite>
+                </blockquote>
+            </div>
+        </section>
 
+        <section class="links-section">
+            <h3>External Links</h3>
+            <div class="external-links">
+                <a href="http://www.cs.gsu.edu/">GSU Computer Science Department</a>
+                <a href="https://www.ieee.org/">IEEE Computer Society</a>
+                <a href="https://www.acm.org/">Association for Computing Machinery</a>
+            </div>
+        </section>
 
+        <section class="social-section">
+            <h3>Connect With Me</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/robert-stanley-cs/">LinkedIn Profile</a>
+                <a href="https://github.com/gsurjs">GitHub Portfolio</a>
+            </div>
+        </section>
+    </main>
 
-  <p>A few of my current projects:</p>
-
-  <ol>
-    <li><a href="https://github.com/gsurjs/Reddit_OverlApp">Reddit OverlApp</a>A Python tool that analyzes the overlap of active users between different subreddits. This tool helps you find common Redditors between communities, assisting in networking opportunities.</li>
-    <li><a href="https://vinny-virtuoso.vercel.app/">Virtuoso</a>A clean, minimalist website for Vinny Virtuoso, an independent hip-hop artist based in Atlanta. The site features a minimalist, futuristic aesthetic that reflects Vinny's unique sound.</li>
-
-  <div class="share-links">
-    <p>Links To My Socials:</p>
-    <a href="https://www.linkedin.com/in/robert-stanley-cs/">LinkedIn</a>
-    <a href="https://github.com/gsurjs">GitHub</a>
-  </div>
-
-<HR>
-	<a href="#middle"> Back to Middle </a>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Robert John Stanley. All rights reserved.</p>
+            <p><a href="#top">Back to Top</a></p>
+        </div>
+    </footer>
 </body>
 </html>
