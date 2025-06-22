@@ -45,12 +45,6 @@ This is my personal homepage created for my Web Programming course at GSU. The s
 - **Education & Career** - Academic info and dream job aspirations
 - **Links & Social** - External resources and social media connections
 
-## 🚀 Current Role
-
-- **Undergraduate Research Assistant** at GSU's Collaborative Human AI Center
-- **Field Product Guide** at Rivian
-- **Computer Science Student** at Georgia State University
-
 ## 🔗 Connect
 
 - **LinkedIn**: [robert-stanley-cs](https://www.linkedin.com/in/robert-stanley-cs/)
