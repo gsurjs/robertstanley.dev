@@ -305,6 +305,7 @@ a:visited {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 15px;
+    justify-content: center;
 }
 
 .external-links a, .social-links a {
