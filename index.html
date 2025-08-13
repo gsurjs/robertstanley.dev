@@ -3,189 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Stanley - GSU Computer Science Student</title>
+    <meta name="description" content="Robert Stanley's personal portfolio showcasing projects in AI, Robotics, and Software Engineering.">
+    <title>Robert Stanley</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/image1.jpg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">RS</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
         <div class="container">
-            <img src="images/image1.jpg" alt="Robert John Stanley - Headshot" class="profile-image">
-            <h1>Robert John Stanley</h1>
-            <h2>B.S. <span class="highlight">Computer Science</span> at <span class="highlight">Georgia State</span> University</h2>
-            <p class="tagline"><em>Go Panthers!</em></p>
+            <div class="header-content">
+                <img src="images/image1.jpg" alt="Robert Stanley" class="profile-image" id="profileImg">
+                <h1 class="typing-text">Robert Stanley</h1>
+                <p class="subtitle">Software Engineer | IT Specialist | AI & Machine Learning</p>
+                <p class="tagline">Building intelligent systems that bridge the gap between AI research and real-world application.</p>
+            </div>
+        </div>
+        
+        <div class="skills-ticker">
+            <div class="skills-scroll">
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Machine Learning</span>
+                <span class="skill-item">Computer Vision</span>
+                <span class="skill-item">C</span>
+                <span class="skill-item">C++</span>
+                <span class="skill-item">C#/.NET</span>
+                <span class="skill-item">Unity</span>
+                <span class="skill-item">AWS & Azure</span>
+                <span class="skill-item">OpenCV</span>
+                <span class="skill-item">Robotics</span>
+                <span class="skill-item">Data Analysis</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">PHP</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">SQL</span>
+                <span class="skill-item">Linux</span>
+                <span class="skill-item">Bash</span>
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">Proxmox</span>
+                <span class="skill-item">Kubernetes</span>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="about-section">
-            <h2>Welcome Everyone!</h2>
-            <p><strong>About Me:</strong></p>
-            <p>I'm currently working as a Junior Software Engineer at GSU's Collaborative Human AI Center while also serving as a Field Product Guide at Rivian. I love the challenge of turning complex ideas into practical solutions that actually make a difference!</p>
-            <p>My research interests center on Human-Robot Interaction, VR/AR, Edge Computing, and building AI systems that people can trust. I'm particularly drawn to projects where cutting-edge technology meets real human needs.</p>
-        </section>
-
-        <section class="education-career">
-            <div class="education">
-                <h3>Education</h3>
-                <ul>
-                    <li><span class="highlight">Georgia State</span> University - B.S. <span class="highlight">Computer Science</span> (Current)</li>
-                    <li><span class = "highlight">Relevant Coursework:</span> Data Structures, Algorithms, Web Programming, Database Systems, Software Development, Cybersecurity</li>
-                    <li><span class="highlight">GPA:</span> 3.8</li>
-                </ul>
-            </div>
-        </section>
-
-        <!--<section class="assignments-section">
-            <h2>Class Assignments & Projects</h2>
-            <div class="class-work-container">
-                <<div class="assignments-column">
-                    <h3>Assignments</h3>
-                    <table class="zebra-table">
-                        <thead>
-                            <tr>
-                                <th>Assignment</th>
-                                <th>Description</th>
-                                <th>Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Assignment 1</td>
-                                <td>Personal Homepage</td>
-                                <td><a href="https://codd.cs.gsu.edu/~rstanley8/WP/HW/HW1/index.html" target="_blank">This Website!</a></td>
-                            </tr>
-                            <tr>
-                                <td>Assignment 2</td>
-                                <td>Movie Review</td>
-                                <td><a href="https://codd.cs.gsu.edu/~rstanley8/WP/HW/HW2/index.html" target="_blank">Rancid Tomatoes</a></td>
-                            </tr>
-                            <tr>
-                                <td>Assignment 3</td>
-                                <td>PHP NerdLuv</td>
-                                <td><a href="#" target="_blank">Coming Soon</a></td>
-                            </tr>
-                            <tr>
-                                <td>Assignment 4</td>
-                                <td>Full Stack Application</td>
-                                <td><a href="#" target="_blank">Coming Soon</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <section id="about" class="fade-in">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a driven Computer Science student specializing in <span class="highlight">Software Engineering</span> and <span class="highlight">AI/Machine Learning</span>. My experience spans from low-level software engineering in robotics to client-facing technical consultation for leading technology brands.</p>
+                    <p>At Georgia State University's CHAI Center, I engineer AI applications for robotics, including <span class="highlight">PantherVision</span>—a mobile app providing advanced computer vision tools and in-house trained ML models. Our team was able to expand this project into Georgia State's Boston Dynamics Spot Robot, developing <a href= "https://github.com/gsurjs/SpotSDK_Cognitive_Companion"><span class="highlight">Cognitive Companion</a></span>. Concurrently, as a Field Product Guide at <span class="highlight">Rivian</span>, I act as a technical consultant, translating complex vehicle systems into tangible benefits for clients.</p>
+                    <p>My core research interests include <span class="highlight">Human-Robot Interaction</span>, <span class="highlight">Computer Vision</span>, <span class="highlight">Trustworthy AI</span>, and <span class="highlight">Edge Computing</span>. I'm actively seeking opportunities where I can leverage my skills in software development and AI to solve challenging problems.</p>
                 </div>
-                
-                <div class="projects-column">
-                    <h3>Class Projects</h3>
-                    <table class="zebra-table">
-                        <thead>
-                            <tr>
-                                <th>Project</th>
-                                <th>Technologies</th>
-                                <th>Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>CSS HTML & PHP</td>
-                                <td>HTML5, CSS3, PHP</td>
-                                <td><a href="JeopardyPW1_Info.html" target="_blank">Jeopardy!</a></td>
-                            </tr>
-                            <tr>
-                                <td>JavaScript</td>
-                                <td>JavaScript, DOM</td>
-                                <td><a href="https://codd.cs.gsu.edu/~rstanley8/WP/HW/HW3/index.html" target="_blank">Brain 🧠 Games!</a></td>
-                            </tr>
-                            <tr>
-                                <td>Final Project</td>
-                                <td>Full Stack Web App</td>
-                                <td><a href="#" target="_blank">Coming Soon</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="quick-stats">
+                    <h3>Quick Stats</h3>
+                    <div class="stat-item"><span class="stat-label">🎓 GPA</span><span class="stat-value">3.86</span></div>
+                    <div class="stat-item"><span class="stat-label">🗓️ Graduation</span><span class="stat-value">Dec 2025</span></div>
+                    <div class="stat-item"><span class="stat-label">💼 Experience</span><span class="stat-value">7+ Years</span></div>
+                    <div class="stat-item"><span class="stat-label">📍 Location</span><span class="stat-value">Atlanta, GA</span></div>
+                    <div class="stat-item"><span class="stat-label">🎯 Focus</span><span class="stat-value">Software Engineering & IT</span></div>
                 </div>
-            </div>
-        </section>-->
-
-        <section class="projects-section">
-            <h2>Personal Projects</h2>
-            <div class="project-highlight">
-                <img src="images/image2.jpg" alt="SPOT Facial Recognition Model" class="project-image">
-                <div class="project-content">
-                    <h3>Spot: Cognitive Companion</h3>
-                    <p>An AI-powered robotic assistant designed to enhance human-robot interactions by integrating dynamic AI capabilities, user recognition, and environmental awareness. This project leverages facial recognition, large language models, and vision language models to create a more interactive and intelligent robotic assistant.</p>
-                    <a href="https://github.com/gsurjs/SpotAI" class="project-link" target="_blank">View Project on GitHub</a>
-                </div>
-            </div>
-
-            <div class="other-projects">
-                <h3>Other Personal Projects</h3>
-                <ol class="project-list">
-                    <li><a href="https://cognitobytes.com" target="_blank">Cognito Bytes</a> - A collection of engaging web-based brain games designed to challenge your cognitive abilities. From word puzzles to memory challenges, test your skills across multiple game modes including daily challenges and endless play.</li>
-                    <li><a href="https://github.com/gsurjs/Reddit_OverlApp" target="_blank">Reddit OverlApp</a> - A Python tool that analyzes the overlap of active users between different subreddits. This tool helps you find common Redditors between communities, assisting in networking opportunities.</li>
-                    <li><a href="https://v1rtuoso.com/" target="_blank">Virtuoso</a> - A clean, minimalist website for Vinny Virtuoso, an independent hip-hop artist based in Atlanta. The site features a minimalist, futuristic aesthetic that reflects Vinny's unique sound.</li>
-                </ol>
             </div>
         </section>
 
-        <section class="interests-section">
-            <div class="two-column">
-                <div class="column">
-                    <h3>Hobbies & Interests</h3>
+        <section id="experience" class="fade-in">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Field Product Guide</div>
+                            <div class="job-company">Rivian Automotive</div>
+                        </div>
+                        <div class="job-duration">Mar 2025 - Present</div>
+                    </div>
                     <ul>
-                        <li><a href="https://www.ifixit.com/" target="_blank">Restoring/Fixing Electronics</a></li>
-                        <li><a href="https://hype2407.com/" target="_blank">Collecting Sneakers and Vinyl</a></li>
-                        <li><a href="https://www.microcenter.com/" target="_blank">Building PCs</a></li>
-                        <li><a href="https://codmunity.gg/top-250" target="_blank">Competitive Video Games</a></li>
-                        <li><a href="https://www.canyon.com/en-us/" target="_blank">Road Bike Cycling</a></li>
-                        <li><a href="https://www.reddit.com/r/latteart/" target="_blank">Crafting Espresso Beverages</a></li>
+                        <li>Providing a top-tier experience for clients, serving as the primary technical expert for Rivian's integrated vehicle systems.</li>
+                        <li>Acting as a Solutions Consultant, providing expert guidance on Rivian's Linux-based infotainment OS, IoT connectivity, and cloud-based mobile applications to drive customer interest and adoption.</li>
+                        <li>Translate complex system features into tangible client benefits through live product demonstrations.</li>
                     </ul>
                 </div>
-                <div class="column">
-                    <h3>Top 5 Favorite Albums</h3>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Junior Software Engineer</div>
+                            <div class="job-company">Georgia State University - CHAI Center</div>
+                        </div>
+                        <div class="job-duration">Jan 2024 - Present</div>
+                    </div>
                     <ul>
-                        <li><a href="https://www.youtube.com/watch?v=_whI9m0SFys&list=PL1RRNXldMeRFm7CqtN44oav-TgaWT3yt_&index=17" target="_blank">Are You Experienced - Jimi Hendrix</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=R0IUR4gkPIE&list=OLAK5uy_lRxaF6d3E73gsvVtuaF0TCp1bNiAa0xyk&index=8" target="_blank">Enter the Wu-Tang (36 Chambers) - Wu-Tang Clan</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=UKYWWfR_GKA&list=RDUKYWWfR_GKA&start_radio=1" target="_blank">Discovery - Daft Punk</li>
-                        <li><a href="https://www.youtube.com/watch?v=z7XiO5Qe2Kk&list=PL9B4-YIgh8zi8jkzydW_9RYVBJNMT4oQh&index=1" target="_blank">Outer Peace - Toro Y Moi</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=DWuAn6C8Mfc&list=RDDWuAn6C8Mfc&start_radio=1" target="_blank">In Rainbows - Radiohead</a></li>
+                        <li>Developed <strong>PantherVision</strong>, a cross-platform computer vision app using Unity, C#, OpenCV, and YOLO.</li>
+                        <li>Engineered AI features including facial recognition, object detection, and document scanning.</li>
+                        <li>Leveraged Python and Azure for scalable cloud deployment and data analysis in robotics research.</li>
                     </ul>
                 </div>
-            </div>
+                </div>
         </section>
 
-        <section class="quote-section">
-            <div class="quote-container">
-                <blockquote>
-                    "Never say never, because limits, like fear, are often an illusion."
-                    <cite>- Michael Jordan</cite>
-                </blockquote>
-            </div>
-        </section>
-
-        <section class="links-social-section">
-            <div class="links-social-container">
-                <div class="links-column">
-                    <h3>External Links</h3>
-                    <div class="external-links">
-                        <a href="http://www.cs.gsu.edu/" target="_blank">GSU CS Department</a>
-                        <a href="https://chai.gsu.edu/" target="_blank">GSU CHAI Center</a>
+        <section id="projects" class="fade-in">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <!--placeholder for gif of project-->
+                    <!--<img src="" alt="Cognitive Companion Project Demo">-->
+                    <div class="project-content">
+                        <h3 class="project-title">Cognitive Companion (Spot AI)</h3>
+                        <p>An AI-powered robotic assistant for the Boston Dynamics Spot robot. Integrates multiple LLMs (Groq, Gemini), OpenAI's Whisper API, facial recognition, and vision systems to enable natural human-robot interactions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">Google Gemini</span><span class="tech-tag">Groq</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">Robotics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gsurjs/SpotSDK_Cognitive_Companion" class="project-link" target="_blank">🔗 GitHub</a>
+                        </div>
                     </div>
                 </div>
-                <div class="social-column">
-                    <h3>Connect With Me</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/robert-stanley-cs/" target="_blank">LinkedIn Profile</a>
-                        <a href="https://github.com/gsurjs" target="_blank">GitHub Portfolio</a>
+
+                <div class="project-card">
+                    <!--placeholder for gif of project-->
+                    <!--<img src="" alt="PantherVision Mobile App Demo">-->
+                    <div class="project-content">
+                        <h3 class="project-title">PantherVision Mobile App</h3>
+                        <p>A cross-platform app providing advanced computer vision tools for mobile robotics. Features include real-time object detection, facial recognition, and secure QR code scanning.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">YOLOv4</span><span class="tech-tag">Azure</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/watch?v=qoYKp3moxik" class="project-link" target="_blank">🔗 Demo Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <!--placeholder for gif of project-->
+                    <!--<img src="" alt="LilChef Twitch Bot Demo">-->
+                    <div class="project-content">
+                        <h3 class="project-title">LilChef Twitch Bot</h3>
+                        <p>A scalable, cloud integrated, and AI-driven Twitch Chat Bot. This bot is designed to create a smarter, more engaging expreience for Twitch Streamer Communities.</p>
+                        <div class="project-tech">
+                             <span class="tech-tag">Javascript</span><span class="tech-tag">Railway</span><span class="tech-tag">Google Gemini</span><span class="tech-tag">Twitch API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gsurjs/LilChefB0t" class="project-link" target="_blank">🔗 GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="contact">
         <div class="container">
-            <p>&copy; 2025 Robert John Stanley. All rights reserved.</p>
-            <p><a href="#top">Back to Top</a></p>
+            <h2>Get In Touch</h2>
+            <p class="tagline" style="margin-bottom: 2rem;">Let's connect to discuss how I can bring value to your team!</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/robert-stanley-cs/" class="footer-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/gsurjs" class="footer-link" target="_blank">GitHub</a>
+                <a href="mailto:rstanley8@student.gsu.edu" class="footer-link">Email</a>
+                <a href="tel:+12094509607" class="footer-link">Phone</a>
+            </div>
+            <p>&copy; 2025 Robert John Stanley. Crafted by Robert and dynamically evolving!</p>
         </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
