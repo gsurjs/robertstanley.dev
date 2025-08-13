@@ -1,13 +1,13 @@
-# GSU Computer Science Student Homepage
+# Robert Stanley Homepage
 
 A personal academic homepage showcasing my journey as a Computer Science student at Georgia State University.
 
 ## 🌐 Live Website
-**[View Live Site](https://codd.cs.gsu.edu/~rstanley8/WP/HW/HW1/index.html)**
+**[View Live Site](https://robertstanley.dev)**
 
 ## 📋 About
 
-This is my personal homepage created for my Web Programming course at GSU. The site features a clean, professional design with a background image and showcases my academic work, personal projects, and interests.
+This is my personal homepage created for, and by, Robert Stanley. The site features a clean, professional design with a background image and showcases my academic work, personal projects, and interests.
 
 ## ✨ Features
 
@@ -16,12 +16,12 @@ This is my personal homepage created for my Web Programming course at GSU. The s
 - **Academic Portfolio** - Class assignments and projects showcase
 - **Personal Projects** - Highlighting my work including the SPOT AI robot project
 - **Interactive Elements** - Hover effects and smooth transitions
-- **Zebra-striped Tables** - Easy-to-read assignment and project listings
 
 ## 🛠️ Technologies Used
 
 - **HTML5** - Semantic markup and structure
 - **CSS3** - Advanced styling with flexbox, grid, and responsive design
+- ***Javascript** - Powers the interactive features, including the dynamic navbar, smooth scrolling, and scroll-triggered animations.
 - **Background Effects** - Fixed background image with overlay effects
 
 ## 📁 Project Structure
@@ -29,6 +29,7 @@ This is my personal homepage created for my Web Programming course at GSU. The s
 ```
 ├── index.html          # Main homepage
 ├── styles.css          # All styling and responsive design
+├── scripts.js          # JavaScript for dynamic features
 └── images/             # Profile and project images
     ├── image1.jpg      # Profile headshot
     ├── image2.jpg      # SPOT robot project
@@ -45,6 +46,11 @@ This is my personal homepage created for my Web Programming course at GSU. The s
 - **Education & Career** - Academic info and dream job aspirations
 - **Links & Social** - External resources and social media connections
 
+- **Header** - Contains a profile image, name, title, and the animated skills ticker.
+- **About Me** - A summary of my background, skills, and research interests, alongside quick stats.
+- **Professional Experience** - A timeline detailing my relevant work experience.
+- **Featured Projects** - A grid showcasing key projects with descriptions, tech stacks, and links.
+- **Contact** - A footer section with links to get in touch 
 ## 🔗 Connect
 
 - **LinkedIn**: [robert-stanley-cs](https://www.linkedin.com/in/robert-stanley-cs/)
@@ -52,6 +58,6 @@ This is my personal homepage created for my Web Programming course at GSU. The s
 
 ---
 
-*Built with ❤️ for CSC 4370 - Web Programming at Georgia State University*
+*Built with ❤️ by Robert Stanley '25 GSU Computer Science Grad*
 
 **Go Panthers! 🐾**
