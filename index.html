@@ -3,183 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Robert Stanley's personal portfolio showcasing projects in AI, Robotics, and Software Engineering.">
-    <title>Robert Stanley</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/image1.jpg" type="image/x-icon">
+    <title>Robert Stanley | Software Engineer & IT Specialist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">RS</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+    <nav id="navbar">
+        <div class="container flex nav-content">
+            <div class="logo">RS.DEV <span class="text-accent">_</span></div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="https://www.linkedin.com/in/robert-stanley-cs/" target="_blank" class="text-accent">LinkedIn ↗</a>
+            </div>
         </div>
     </nav>
 
-    <header id="home">
-        <div class="container">
-            <div class="header-content">
-                <img src="images/image1.jpg" alt="Robert Stanley" class="profile-image" id="profileImg">
-                <h1 class="typing-text">Robert Stanley</h1>
-                <p class="subtitle">Software Engineer | IT Specialist | AI & Machine Learning</p>
-                <p class="tagline">Building intelligent systems that bridge the gap between AI research and real-world application.</p>
-            </div>
-        </div>
-        
-        <div class="skills-ticker">
-            <div class="skills-scroll">
-                <span class="skill-item">Python</span>
-                <span class="skill-item">Machine Learning</span>
-                <span class="skill-item">Computer Vision</span>
-                <span class="skill-item">C</span>
-                <span class="skill-item">C++</span>
-                <span class="skill-item">C#/.NET</span>
-                <span class="skill-item">Unity</span>
-                <span class="skill-item">AWS & Azure</span>
-                <span class="skill-item">OpenCV</span>
-                <span class="skill-item">Robotics</span>
-                <span class="skill-item">Data Analysis</span>
-                <span class="skill-item">Java</span>
-                <span class="skill-item">HTML</span>
-                <span class="skill-item">CSS</span>
-                <span class="skill-item">PHP</span>
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">SQL</span>
-                <span class="skill-item">Linux</span>
-                <span class="skill-item">Bash</span>
-                <span class="skill-item">Git</span>
-                <span class="skill-item">Docker</span>
-                <span class="skill-item">Proxmox</span>
-                <span class="skill-item">Kubernetes</span>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="about" class="fade-in">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I'm a driven Computer Science student specializing in <span class="highlight">Software Engineering</span> and <span class="highlight">AI/Machine Learning</span>. My experience spans from low-level software engineering in robotics to client-facing technical consultation for leading technology brands.</p>
-                    <p>At Georgia State University's CHAI Center, I engineer AI applications for robotics, including <span class="highlight">PantherVision</span>—a mobile app providing advanced computer vision tools and in-house trained ML models. Our team was able to expand this project into Georgia State's Boston Dynamics Spot Robot, developing <a href= "https://github.com/gsurjs/SpotSDK_Cognitive_Companion"><span class="highlight">Cognitive Companion</a></span>. Concurrently, as a Field Product Guide at <span class="highlight">Rivian</span>, I act as a technical consultant, translating complex vehicle systems into tangible benefits for clients.</p>
-                    <p>My core research interests include <span class="highlight">Human-Robot Interaction</span>, <span class="highlight">Computer Vision</span>, <span class="highlight">Trustworthy AI</span>, and <span class="highlight">Edge Computing</span>. I'm actively seeking opportunities where I can leverage my skills in software development and AI to solve challenging problems.</p>
+    <div class="container">
+        <section class="hero flex fade-in">
+            <div class="hero-content">
+                <span class="role-badge">Available for Roles</span>
+                <h1>Robert Stanley<br><span class="text-accent">Software Engineer & IT Specialist</span></h1>
+                <p class="hero-p">
+                    I combine professional experience in enterprise IT infrastructure and Linux systems with cutting-edge research in software development and AI. I build reliable systems and solve complex technical problems.
+                </p>
+                <div class="cta-group flex">
+                    <a href="https://www.linkedin.com/in/robert-stanley-cs/" target="_blank" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24" style="margin-right: 5px;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        Connect on LinkedIn
+                    </a>
+                    <a href="mailto:rstanley8@student.gsu.edu?subject=Requesting%20Resume%20Access" class="btn btn-secondary">
+                        <svg class="icon" viewBox="0 0 24 24" style="margin-right: 5px;"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        Request Resume
+                    </a>
                 </div>
-                <div class="quick-stats">
-                    <h3>Quick Stats</h3>
-                    <div class="stat-item"><span class="stat-label">🎓 GPA</span><span class="stat-value">3.86</span></div>
-                    <div class="stat-item"><span class="stat-label">🗓️ Graduation</span><span class="stat-value">Dec 2025</span></div>
-                    <div class="stat-item"><span class="stat-label">💼 Experience</span><span class="stat-value">7+ Years</span></div>
-                    <div class="stat-item"><span class="stat-label">📍 Location</span><span class="stat-value">Atlanta, GA</span></div>
-                    <div class="stat-item"><span class="stat-label">🎯 Focus</span><span class="stat-value">Software Engineering & IT</span></div>
-                </div>
+            </div>
+            <div class="profile-img-container">
+                <img src="https://placehold.co/400x400/1e293b/38bdf8?text=RS" alt="Robert Stanley Profile" class="profile-img">
             </div>
         </section>
 
-        <section id="experience" class="fade-in">
-            <h2>Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-line"></div>
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Field Product Guide</div>
-                            <div class="job-company">Rivian Automotive</div>
-                        </div>
-                        <div class="job-duration">Mar 2025 - Present</div>
+        <section class="fade-in">
+            <h2 class="section-title" id="projects">Project Deployments</h2>
+            <div class="projects-container">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
                     </div>
-                    <ul>
-                        <li>Providing a top-tier experience for clients, serving as the primary technical expert for Rivian's integrated vehicle systems.</li>
-                        <li>Acting as a Solutions Consultant, providing expert guidance on Rivian's Linux-based infotainment OS, IoT connectivity, and cloud-based mobile applications to drive customer interest and adoption.</li>
-                        <li>Translate complex system features into tangible client benefits through live product demonstrations.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">Junior Software Engineer</div>
-                            <div class="job-company">Georgia State University - CHAI Center</div>
+                    <div class="terminal-body">
+                        <div class="project-sidebar">
+                            <div class="sidebar-header">Select Module</div>
+                            <div class="project-item" id="item-panther" onclick="runCommand('panther')">00_PantherMarket</div>
+                            <div class="project-item" onclick="runCommand('spot')">01_Cognitive_Spot</div>
+                            <div class="project-item" onclick="runCommand('gloveboxx')">02_GloveBoxx_App</div>
+                            <div class="project-item" onclick="runCommand('cognito')">03_Cognito_Bytes</div>
+                            <div class="project-item" onclick="runCommand('reddit')">04_Reddit_Overlap</div>
                         </div>
-                        <div class="job-duration">Jan 2024 - Present</div>
-                    </div>
-                    <ul>
-                        <li>Developed <strong>PantherVision</strong>, a cross-platform computer vision app using Unity, C#, OpenCV, and YOLO.</li>
-                        <li>Engineered AI features including facial recognition, object detection, and document scanning.</li>
-                        <li>Leveraged Python and Azure for scalable cloud deployment and data analysis in robotics research.</li>
-                    </ul>
-                </div>
-                </div>
-        </section>
-
-        <section id="projects" class="fade-in">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <!--placeholder for gif of project-->
-                    <!--<img src="" alt="Cognitive Companion Project Demo">-->
-                    <div class="project-content">
-                        <h3 class="project-title">Cognitive Companion (Spot AI)</h3>
-                        <p>An AI-powered robotic assistant for the Boston Dynamics Spot robot. Integrates multiple LLMs (Groq, Gemini), OpenAI's Whisper API, facial recognition, and vision systems to enable natural human-robot interactions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">Google Gemini</span><span class="tech-tag">Groq</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">Robotics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/gsurjs/SpotSDK_Cognitive_Companion" class="project-link" target="_blank">🔗 GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <!--placeholder for gif of project-->
-                    <!--<img src="" alt="PantherVision Mobile App Demo">-->
-                    <div class="project-content">
-                        <h3 class="project-title">PantherVision Mobile App</h3>
-                        <p>A cross-platform app providing advanced computer vision tools for mobile robotics. Features include real-time object detection, facial recognition, and secure QR code scanning.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Unity</span><span class="tech-tag">C#</span><span class="tech-tag">OpenCV</span><span class="tech-tag">YOLOv4</span><span class="tech-tag">Azure</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://www.youtube.com/watch?v=qoYKp3moxik" class="project-link" target="_blank">🔗 Demo Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <!--placeholder for gif of project-->
-                    <!--<img src="" alt="LilChef Twitch Bot Demo">-->
-                    <div class="project-content">
-                        <h3 class="project-title">LilChef Twitch Bot</h3>
-                        <p>A scalable, cloud integrated, and AI-driven Twitch Chat Bot. This bot is designed to create a smarter, more engaging expreience for Twitch Streamer Communities.</p>
-                        <div class="project-tech">
-                             <span class="tech-tag">Javascript</span><span class="tech-tag">Railway</span><span class="tech-tag">Google Gemini</span><span class="tech-tag">Twitch API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/gsurjs/LilChefB0t" class="project-link" target="_blank">🔗 GitHub</a>
+                        
+                        <div class="terminal-content" id="terminal-output">
+                            <div style="color: #555; font-family: 'Courier New'; margin-top: 2rem;">
+                                > Waiting for user input... <span class="cursor"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="tagline" style="margin-bottom: 2rem;">Let's connect to discuss how I can bring value to your team!</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/robert-stanley-cs/" class="footer-link" target="_blank">LinkedIn</a>
-                <a href="https://github.com/gsurjs" class="footer-link" target="_blank">GitHub</a>
-                <a href="mailto:rstanley8@student.gsu.edu" class="footer-link">Email</a>
-                <a href="tel:+12094509607" class="footer-link">Phone</a>
+        <section class="fade-in">
+            <h2 class="section-title" id="experience">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Jan 2025 — Present</span>
+                    <h3 class="timeline-role">Field Product Guide (Technical Lead)</h3>
+                    <h4 class="timeline-org">Rivian Automotive</h4>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Technical diagnostics and troubleshooting of EV software systems.</li>
+                            <li>Translating complex Linux-based OS features for client success.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Jan 2024 — Present</span>
+                    <h3 class="timeline-role">Junior Software Engineer</h3>
+                    <h4 class="timeline-org">Georgia State University (CHAI Lab)</h4>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Developing C# applications and Python AI pipelines for robotics.</li>
+                            <li>Integrating LLMs (Gemini/Groq) with hardware SDKs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Jun 2023 — Aug 2024</span>
+                    <h3 class="timeline-role">IT Support & Data Analyst</h3>
+                    <h4 class="timeline-org">Five Star Food Service</h4>
+                    <div class="timeline-desc">
+                        <ul>
+                            <li>Enterprise hardware/software support and SQL database management.</li>
+                            <li>Developed an internal IT ticketing system to streamline workflows.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2025 Robert John Stanley. Crafted by Robert and dynamically evolving!</p>
-        </div>
-    </footer>
+        </section>
 
-    <script src="scripts.js"></script>
+        <section class="fade-in">
+            <h2 class="section-title" id="skills">Technical Expertise</h2>
+            <div class="skills-grid grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <svg class="icon-lg" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                        <h3>Software Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">Python</span><span class="tag">C++ / C</span><span class="tag">C# / .NET</span><span class="tag">Dart / Flutter</span><span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <svg class="icon-lg" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                        <h3>IT & Infrastructure</h3>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">Linux</span><span class="tag">AWS / Firebase</span><span class="tag">Docker</span><span class="tag">Bash</span><span class="tag">Network Admin</span>
+                    </div>
+                </div>
+                 <div class="skill-card">
+                    <div class="skill-header">
+                        <svg class="icon-lg" viewBox="0 0 24 24"><path d="M12 2c-5.33 0-8 3.67-8 6v1c0 1.1.9 2 2 2h1v7c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V11h1c1.1 0 2-.9 2-2V8c0-2.33-2.67-6-8-6zm-1 9H9v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+                        <h3>Specialized Tech</h3>
+                    </div>
+                    <div class="skill-list">
+                        <span class="tag">ROS / Robotics</span><span class="tag">OpenCV</span><span class="tag">LLM Integration</span><span class="tag">Stripe API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="browser-controls">
+                    <div class="browser-dot close" onclick="closeModal()"></div>
+                    <div class="browser-dot"></div>
+                    <div class="browser-dot"></div>
+                </div>
+                <div class="browser-address-bar" id="modal-url">https://loading...</div>
+            </div>
+            <div class="modal-body" id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
