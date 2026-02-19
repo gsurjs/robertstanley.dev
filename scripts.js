@@ -98,14 +98,6 @@ function runCommand(key) {
 
     const cmdText = p.cmd;
     const typeSpan = document.getElementById('typed-command');
-
-    // Instantly renders text on screens 768px or smaller to prevent iOS main-thread freezing
-    if (window.innerWidth <= 768) {
-        typeSpan.textContent = cmdText;
-        showResult(p);
-        return;
-    }
-    
     let i = 0;
     isTyping = true;
 
