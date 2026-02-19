@@ -362,11 +362,14 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     .btn { width: 100%; justify-content: center; } /* Full width buttons for easier tapping */
     .profile-img { width: 160px; height: 160px; }
 
+    .section-title::after { display: none; }
+
     /* Terminal: Fix Text Crowding */
     .terminal-body { grid-template-columns: 1fr; }
     .project-sidebar { 
         display: flex; flex-direction: row; overflow-x: auto; 
-        border-right: none; border-bottom: 1px solid var(--border); 
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
         height: auto; max-height: none;
     }
     .project-item { 
@@ -387,11 +390,11 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     /* Timeline: Fix Indentation Crowding */
     .timeline { 
         margin-left: 0; 
-        padding-left: 1.5rem; /* Reduced from 2rem */
-        border-left-width: 2px;
+        padding-left: 1.2rem; /* Reduced spacing */
+        border-left-width: 1px;
     }
     .timeline-item::before {
-        left: -1.9rem; /* Re-aligned dot to match new padding */
+        left: -1.58rem; /* Re-aligned dot to match new padding */
         width: 12px; height: 12px; top: 7px; /* Slightly smaller dot */
     }
     .timeline-item { margin-bottom: 2rem; }
