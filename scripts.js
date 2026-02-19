@@ -178,12 +178,10 @@ function openModal(title) {
     }
     
     modal.classList.add('open');
-    document.body.classList.add('modal-open');
 }
 
 function closeModal() { 
     modal.classList.remove('open'); 
-    document.body.classList.remove('modal-open'); // FIX: Unlocks the background body
 }
 modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
@@ -200,3 +198,12 @@ const terminalObserver = new IntersectionObserver((entries) => {
 
 const targetSection = document.querySelector('.projects-container');
 if(targetSection) terminalObserver.observe(targetSection);
+
+// --- iOS SAFARI SCROLL LOCK FIX ---
+// Prevents touch events on the overlay from confusing Safari's background scroll engine
+modal.addEventListener('touchmove', function(e) {
+    // If the touch target is NOT inside the iframe (like the dark overlay or modal header), block the scroll
+    if (!e.target.closest('.preview-frame')) {
+        e.preventDefault();
+    }
+}, { passive: false }); // passive: false is required for preventDefault() to work on touch events
