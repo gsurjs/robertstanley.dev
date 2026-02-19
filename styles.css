@@ -353,7 +353,7 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     .nav-links a { margin: 0 1rem; font-size: 0.85rem; }
 
     /* Hero Adjustments */
-    .hero { flex-direction: column-reverse; text-align: center; padding: 2rem 0; gap: 2rem; }
+    .hero { flex-direction: column; text-align: center; padding: 2rem 0; gap: 2rem; }
     h1 { font-size: 2.2rem; }
     .hero-p { margin: 0 auto 1.5rem; font-size: 1rem; }
     .cta-group { justify-content: center; }
