@@ -376,7 +376,7 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
         flex-direction: row; 
         overflow-x: auto; 
         -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-        touch-action: pan-y; /* Allows vertical page scroll even when touching sidebar */
+        touch-action: pan-x pan-y; /* FIX: Added pan-x to allow horizontal scrolling */
         border-right: none; 
         border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtler separator */
         height: auto; 
