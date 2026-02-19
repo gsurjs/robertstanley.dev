@@ -202,3 +202,32 @@ const terminalObserver = new IntersectionObserver((entries) => {
 
 const targetSection = document.querySelector('.projects-container');
 if(targetSection) terminalObserver.observe(targetSection);
+
+// Start of Resume Request modal
+const resumeModal = document.getElementById('resume-modal');
+
+function openResumeModal() {
+    scrollPosition = window.scrollY; 
+    document.body.style.position = 'fixed'; 
+    document.body.style.top = `-${scrollPosition}px`; 
+    document.body.style.width = '100%';
+    
+    resumeModal.classList.add('open');
+}
+
+function closeResumeModal() { 
+    resumeModal.classList.remove('open'); 
+    
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    
+    document.documentElement.style.scrollBehavior = 'auto'; 
+    window.scrollTo(0, scrollPosition);
+    document.documentElement.style.scrollBehavior = ''; 
+}
+
+// Closes modal if user clicks the dark overlay outside the form
+resumeModal.addEventListener('click', (e) => { 
+    if (e.target === resumeModal) closeResumeModal(); 
+});
