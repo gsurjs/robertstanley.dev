@@ -98,6 +98,14 @@ function runCommand(key) {
 
     const cmdText = p.cmd;
     const typeSpan = document.getElementById('typed-command');
+
+    // Instantly renders text on screens 768px or smaller to prevent iOS main-thread freezing
+    if (window.innerWidth <= 768) {
+        typeSpan.textContent = cmdText;
+        showResult(p);
+        return;
+    }
+    
     let i = 0;
     isTyping = true;
 
@@ -198,12 +206,3 @@ const terminalObserver = new IntersectionObserver((entries) => {
 
 const targetSection = document.querySelector('.projects-container');
 if(targetSection) terminalObserver.observe(targetSection);
-
-// --- iOS SAFARI SCROLL LOCK FIX ---
-// Prevents touch events on the overlay from confusing Safari's background scroll engine
-modal.addEventListener('touchmove', function(e) {
-    // If the touch target is NOT inside the iframe (like the dark overlay or modal header), block the scroll
-    if (!e.target.closest('.preview-frame')) {
-        e.preventDefault();
-    }
-}, { passive: false }); // passive: false is required for preventDefault() to work on touch events
