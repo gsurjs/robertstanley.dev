@@ -52,6 +52,16 @@ const projects = {
 let isTyping = false;
 let hasAutoStarted = false; // Flag for scroll trigger
 const modal = document.getElementById('project-modal');
+const resumeModal = document.getElementById('resume-modal');
+
+// --- HELPER TO LOCK BODY SCROLL ---
+function lockScroll() {
+    document.body.classList.add('modal-open');
+}
+
+function unlockScroll() {
+    document.body.classList.remove('modal-open');
+}
 
 // --- FADE IN OBSERVER ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -63,17 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            }
+            if (!entry.isIntersecting) return;
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Stop observing once visible
+            observer.unobserve(entry.target);
         });
     }, appearOptions);
 
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
 });
 
 // --- TERMINAL LOGIC ---
@@ -176,23 +182,38 @@ function openModal(title) {
             </div>
         `;
     }
-    
+    lockScroll();
     modal.classList.add('open');
 }
 
-function closeModal() { modal.classList.remove('open'); }
-modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+function closeModal() { 
+    modal.classList.remove('open'); 
+    unlockScroll(); // UNLOCK BODY
+}
 
-// INTERSECTION OBSERVER for Auto-Start on Scroll (Terminal)
+function openResumeModal() {
+    lockScroll(); // LOCK BODY
+    resumeModal.classList.add('open');
+}
+
+function closeResumeModal() {
+    resumeModal.classList.remove('open');
+    unlockScroll(); // UNLOCK BODY
+}
+
+window.addEventListener('click', (e) => { 
+    if (e.target === modal) closeModal(); 
+    if (e.target === resumeModal) closeResumeModal();
+});
+
 const terminalObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !hasAutoStarted) {
             hasAutoStarted = true;
-            // Trigger the first project automatically
             runCommand('panther'); 
         }
     });
-}, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+}, { threshold: 0.3 });
 
 const targetSection = document.querySelector('.projects-container');
 if(targetSection) terminalObserver.observe(targetSection);

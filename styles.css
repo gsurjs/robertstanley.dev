@@ -16,8 +16,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
 html { scroll-behavior: smooth; }
 
-body { 
-    /* YOUR ORIGINAL BACKGROUND STYLE */
+body {
     background: 
         linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(26, 26, 26, 0.9)),
         url('./images/image5.jpg');
@@ -27,9 +26,16 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    touch-action: manipulation;
 }
 
-/* --- FADE IN ANIMATION (From your original site) --- */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* --- FADE IN ANIMATION--- */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -226,9 +232,9 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
     z-index: 1000; display: flex; justify-content: center; align-items: center;
-    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s, visibility 0.3s;
 }
-.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-overlay.open { opacity: 1; visiblity: visibile; pointer-events: all; }
 
 .modal-content {
     background: var(--bg-card); border: 1px solid var(--border);
@@ -370,48 +376,28 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
         display: flex; 
         flex-direction: row; 
         overflow-x: auto; 
-        -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-        touch-action: pan-y; /* Allows vertical page scroll even when touching sidebar */
+        width: 100%; 
+        -webkit-overflow-scrolling: touch; 
         border-right: none; 
-        border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtler separator */
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
         height: auto; 
         max-height: none;
-        padding-bottom: 0.5rem; /* Add breathing room for scrollbar */
+        padding-bottom: 0.5rem; 
+        /* Ensure x-axis scroll doesn't bubble up to body */
+        overscroll-behavior-x: contain; 
     }
-    .project-item { 
-        white-space: nowrap; flex: 0 0 auto; 
-        padding: 0.8rem 1.2rem; font-size: 0.85rem;
-    }
+    .project-item { white-space: nowrap; flex: 0 0 auto; padding: 0.8rem 1.2rem; font-size: 0.85rem; }
     
-    /* More breathing room for content */
-    .terminal-content { 
-        padding: 1.5rem; 
-        line-height: 1.6; /* De-crowd text lines */
-    }
+    .terminal-content { padding: 1.5rem; line-height: 1.6; }
     .cmd-line { margin-bottom: 1.5rem; }
-    
-    .terminal-content, .cmd-line, .json-key, .json-string {
-        font-size: 0.85rem; /* Readable but fits small screens */
-        word-break: break-word; 
-    }
+    .terminal-content, .cmd-line, .json-key, .json-string { font-size: 0.85rem; word-break: break-word; }
 
-    /* Timeline: Fix Indentation & Separator */
-    .timeline { 
-        margin-left: 0; 
-        padding-left: 1.5rem; 
-        border-left-width: 1px; /* Thinner line */
-    }
-    .timeline-item::before {
-        /* Center dot perfectly on line */
-        left: -1.9rem; 
-        width: 12px; height: 12px; top: 7px;
-    }
-    .timeline-item { margin-bottom: 2.5rem; } /* More vertical space */
-
-    /* Skills: Safe sizing */
+    .timeline { margin-left: 0; padding-left: 1.5rem; border-left-width: 1px; }
+    .timeline-item::before { left: -1.9rem; width: 12px; height: 12px; top: 7px; }
+    .timeline-item { margin-bottom: 2.5rem; }
     .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
     
-    /* Modal: Maximize space */
     .modal-content { height: 85vh; width: 95%; margin: 0 auto; }
+    .resume-content { height: auto; max-height: 85vh; }
     .repo-img { max-height: 180px; }
 }
