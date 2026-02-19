@@ -120,7 +120,6 @@ function showResult(p) {
     resultDiv.innerHTML = `
         <div style="margin-bottom: 1rem; color: #94a3b8;">> Build success. Deploying module... Done.</div>
         <div style="font-family: 'Courier New'; line-height: 1.5; background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 6px;">
-            <span class="text-secondary"># ProjectManifest.json</span><br>
             title: <span class="text-accent">"${p.title}"</span><br>
             domain: <span class="text-accent">"${p.domain}"</span><br>
             desc: <span class="text-secondary">"${p.desc}"</span><br>
