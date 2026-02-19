@@ -53,7 +53,7 @@ let isTyping = false;
 let hasAutoStarted = false; // Flag for scroll trigger
 const modal = document.getElementById('project-modal');
 
-// --- FADE IN OBSERVER (Restored from your original site) ---
+// --- FADE IN OBSERVER ---
 document.addEventListener('DOMContentLoaded', () => {
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
@@ -118,13 +118,17 @@ function showResult(p) {
     const btnText = p.type === 'web' ? '[ LAUNCH ]' : '[ OPEN REPO ]';
     
     resultDiv.innerHTML = `
-        <div style="margin-bottom: 1rem; color: #94a3b8;">> Build success. Deploying module... Done.</div>
+        <div style="margin-bottom: 1rem; color: #94a3b8;">> Compiling... Done. Reading manifest:</div>
         <div style="font-family: 'Courier New'; line-height: 1.5; background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 6px;">
-            <span class="text-secondary"># ProjectManifest.json</span><br>
-            title: <span class="text-accent">"${p.title}"</span><br>
-            domain: <span class="text-accent">"${p.domain}"</span><br>
-            desc: <span class="text-secondary">"${p.desc}"</span><br>
-            stack: [ ${p.tech.map(t => `<span class="json-bool">"${t}"</span>`).join(', ')} ]
+            <span style="color: #94a3b8;">{</span><br>
+            &nbsp;&nbsp;<span class="json-key">"project"</span>: <span class="json-string">"${p.title}"</span>,<br>
+            &nbsp;&nbsp;<span class="json-key">"domain"</span>: <span class="json-string">"${p.domain}"</span>,<br>
+            &nbsp;&nbsp;<span class="json-key">"description"</span>: <span class="json-string">"${p.desc}"</span>,<br>
+            &nbsp;&nbsp;<span class="json-key">"stack"</span>: [<br>
+            ${p.tech.map(t => `&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-string">"${t}"</span>`).join(',<br>')}<br>
+            &nbsp;&nbsp;],<br>
+            &nbsp;&nbsp;<span class="json-key">"status"</span>: <span style="color: #22c55e;">"Deployed"</span><br>
+            <span style="color: #94a3b8;">}</span>
             <br><br>
             <button class="launch-btn" onclick="openModal('${p.title}')">${btnText}</button>
         </div>
