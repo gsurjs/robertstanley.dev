@@ -33,6 +33,9 @@ body.modal-open {
     overflow: hidden;
     position: fixed;
     width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; /* JS will override this to maintain position */
 }
 
 /* --- FADE IN ANIMATION--- */

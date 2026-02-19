@@ -51,16 +51,32 @@ const projects = {
 
 let isTyping = false;
 let hasAutoStarted = false; // Flag for scroll trigger
+let scrollPosition = 0; // Variable to store where the user was scrolled
+
 const modal = document.getElementById('project-modal');
 const resumeModal = document.getElementById('resume-modal');
 
 // --- HELPER TO LOCK BODY SCROLL ---
 function lockScroll() {
+    // 1. Capture exactly where the user is
+    scrollPosition = window.scrollY || window.pageYOffset;
+    
+    // 2. Lock the body
     document.body.classList.add('modal-open');
+    
+    // 3. Offset the body by the scroll amount so it doesn't jump to top
+    document.body.style.top = `-${scrollPosition}px`;
 }
 
 function unlockScroll() {
+    // 1. Remove the lock class
     document.body.classList.remove('modal-open');
+    
+    // 2. Clear the manual positioning
+    document.body.style.top = '';
+    
+    // 3. Instantly jump back to original position
+    window.scrollTo(0, scrollPosition);
 }
 
 // --- FADE IN OBSERVER ---
