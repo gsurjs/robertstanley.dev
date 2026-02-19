@@ -10,7 +10,7 @@ const projects = {
     },
     spot: {
         type: 'repo',
-        cmd: './spot_ai_controller.py --init',
+        cmd: 'python3 main.py',
         title: "Spot: Cognitive Companion",
         url: "https://github.com/gsurjs/SpotAI",
         img: "https://raw.githubusercontent.com/gsurjs/SpotAI/main/images/spot_header.jpg",
@@ -115,7 +115,7 @@ function runCommand(key) {
 
 function showResult(p) {
     const resultDiv = document.getElementById('execution-result');
-    const btnText = p.type === 'web' ? '[ LAUNCH LIVE DEMO ]' : '[ OPEN GITHUB REPO ]';
+    const btnText = p.type === 'web' ? '[ LAUNCH ]' : '[ OPEN REPO ]';
     
     resultDiv.innerHTML = `
         <div style="margin-bottom: 1rem; color: #94a3b8;">> Build success. Deploying module... Done.</div>
