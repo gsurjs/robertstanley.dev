@@ -178,9 +178,13 @@ function openModal(title) {
     }
     
     modal.classList.add('open');
+    document.body.classList.add('modal-open');
 }
 
-function closeModal() { modal.classList.remove('open'); }
+function closeModal() { 
+    modal.classList.remove('open'); 
+    document.body.classList.remove('modal-open'); // FIX: Unlocks the background body
+}
 modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
 // INTERSECTION OBSERVER for Auto-Start on Scroll (Terminal)
