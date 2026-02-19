@@ -281,6 +281,55 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     border: 1px solid var(--border);
 }
 
+/* Iframe Preview Overlay Styles */
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.iframe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0); /* Transparent by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.iframe-overlay:hover {
+    background: rgba(15, 23, 42, 0.6); /* Darkens when user hovers to click */
+}
+
+.overlay-msg {
+    opacity: 0;
+    background: var(--accent); /* Uses your Sky Blue color */
+    color: var(--bg-dark);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iframe-overlay:hover .overlay-msg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 .output-area { margin-top: 1rem; opacity: 0; transition: opacity 0.5s; }
 .output-area.visible { opacity: 1; }

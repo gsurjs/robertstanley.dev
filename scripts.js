@@ -6,7 +6,7 @@ const projects = {
         url: "https://www.panthermarket.app/",
         domain: "Full-Stack Web App",
         desc: "GSU-exclusive marketplace with AI moderation, Stripe payments, and identity verification.",
-        tech: ["JavaScript", "Firebase", "Stripe", "Vercel", "GenAI"]
+        tech: ["JavaScript", "Firebase", "Stripe", "Vercel", "GenAI APIs"]
     },
     spot: {
         type: 'repo',
@@ -16,7 +16,7 @@ const projects = {
         img: "https://raw.githubusercontent.com/gsurjs/SpotAI/main/images/spot_header.jpg",
         domain: "Robotics & AI",
         desc: "AI-powered assistant for Boston Dynamics Spot robot using OpenAI/Gemini/Groq and Computer Vision.",
-        tech: ["Python", "Spot SDK", "GenAI", "Linux"]
+        tech: ["Python", "Spot SDK", "GenAI APIs"]
     },
     gloveboxx: {
         type: 'repo',
@@ -141,7 +141,18 @@ function openModal(title) {
     urlBar.textContent = p.url;
 
     if (p.type === 'web') {
-        modalBody.innerHTML = `<iframe src="${p.url}" class="preview-frame" sandbox="allow-scripts allow-same-origin"></iframe>`;
+        modalBody.innerHTML = `
+            <div class="iframe-wrapper">
+                <iframe src="${p.url}" class="preview-frame" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                
+                <a href="${p.url}" target="_blank" class="iframe-overlay">
+                    <div class="overlay-msg">
+                        <span>Interact on Live Site</span>
+                        <svg class="icon" style="width: 20px; height: 20px; color: #000;" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </div>
+                </a>
+            </div>
+        `;
     } else {
         modalBody.innerHTML = `
             <div class="repo-card">
