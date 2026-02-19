@@ -182,6 +182,10 @@ function openModal(title) {
 
 function closeModal() { 
     modal.classList.remove('open'); 
+    setTimeout(() => {
+        document.getElementById('modal-body').innerHTML = '';
+        document.getElementById('modal-url').textContent = 'https://loading...';
+    }, 300);
 }
 modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
