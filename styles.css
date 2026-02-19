@@ -383,29 +383,30 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
         padding: 0.8rem 1.2rem; font-size: 0.85rem;
     }
     
+    /* More breathing room for content */
     .terminal-content { 
         padding: 1.5rem; 
         line-height: 1.6; /* De-crowd text lines */
     }
     .cmd-line { margin-bottom: 1.5rem; }
     
-    /* Smaller monospace font to prevent code wrapping */
     .terminal-content, .cmd-line, .json-key, .json-string {
-        font-size: 0.85rem; /* 12-13px looks cleaner for code on mobile */
-        word-break: break-word; /* Safety net for long strings */
+        font-size: 0.85rem; /* Readable but fits small screens */
+        word-break: break-word; 
     }
 
-    /* Timeline: Fix Indentation Crowding */
+    /* Timeline: Fix Indentation & Separator */
     .timeline { 
         margin-left: 0; 
-        padding-left: 1.5rem; /* Reduced spacing */
-        border-left-width: 1px;
+        padding-left: 1.5rem; 
+        border-left-width: 1px; /* Thinner line */
     }
     .timeline-item::before {
-        left: -1.9rem; /* Re-aligned dot to match new padding */
-        width: 12px; height: 12px; top: 7px; /* Slightly smaller dot */
+        /* Center dot perfectly on line */
+        left: -1.9rem; 
+        width: 12px; height: 12px; top: 7px;
     }
-    .timeline-item { margin-bottom: 2.5rem; }
+    .timeline-item { margin-bottom: 2.5rem; } /* More vertical space */
 
     /* Skills: Safe sizing */
     .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
