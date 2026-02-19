@@ -231,3 +231,64 @@ function closeResumeModal() {
 resumeModal.addEventListener('click', (e) => { 
     if (e.target === resumeModal) closeResumeModal(); 
 });
+
+// --- FORMSPREE AJAX SUBMISSION ---
+const resumeForm = document.getElementById('resume-form');
+const submitBtn = document.getElementById('resume-submit');
+
+resumeForm.addEventListener('submit', async function(e) {
+    e.preventDefault(); // Stop the page from redirecting
+    
+    // Visual feedback while sending
+    submitBtn.textContent = "Sending...";
+    submitBtn.style.opacity = "0.7";
+    submitBtn.style.pointerEvents = "none";
+
+    const formData = new FormData(resumeForm);
+
+    try {
+        const response = await fetch(resumeForm.action, {
+            method: resumeForm.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json' // Tells Formspree we are using AJAX
+            }
+        });
+        
+        if (response.ok) {
+            // Success! Update button to green and show the thank you message
+            submitBtn.textContent = "SUBMITTED! Thank you";
+            submitBtn.style.background = "var(--success)"; // Uses your green success variable
+            submitBtn.style.boxShadow = "0 0 15px rgba(34, 197, 94, 0.4)";
+            submitBtn.style.opacity = "1";
+            
+            resumeForm.reset(); // Clear the input fields
+            
+            // Automatically close the modal after 2.5 seconds
+            setTimeout(() => {
+                closeResumeModal();
+                
+                // Reset the button back to its original state for the next time it opens
+                setTimeout(() => {
+                    submitBtn.textContent = "Send Request";
+                    submitBtn.style.background = "";
+                    submitBtn.style.boxShadow = "";
+                    submitBtn.style.pointerEvents = "all";
+                }, 500);
+            }, 2500);
+            
+        } else {
+            // Handle Formspree-side errors (e.g., invalid email format)
+            submitBtn.textContent = "Error. Please try again.";
+            submitBtn.style.background = "#ef4444"; // Red error color
+            submitBtn.style.opacity = "1";
+            submitBtn.style.pointerEvents = "all";
+        }
+    } catch (error) {
+        // Handle network/connection errors
+        submitBtn.textContent = "Network Error. Try again.";
+        submitBtn.style.background = "#ef4444";
+        submitBtn.style.opacity = "1";
+        submitBtn.style.pointerEvents = "all";
+    }
+});
