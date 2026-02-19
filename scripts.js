@@ -42,7 +42,7 @@ const projects = {
         cmd: 'python3 OverlApp.py --batch-mode',
         title: "Reddit Overlap Analyzer",
         url: "https://github.com/gsurjs/OverlApp",
-        img: "https://placehold.co/600x300/1e293b/38bdf8?text=Data+Analysis+Tool",
+        video: "images/reddit_overlapp.mp4",
         domain: "Data Analysis / Python",
         desc: "CLI tool to analyze user overlap between subreddits for community insights and networking.",
         tech: ["Python", "Reddit API", "Data Analytics", "JSON"]
@@ -162,9 +162,14 @@ function openModal(title) {
             `;
         }
     } else {
+        // Updated repo-card logic to support video or images
+        const mediaHtml = p.video 
+            ? `<video src="${p.video}" class="repo-img" autoplay loop muted playsinline disablePictureInPicture style="pointer-events: none;"></video>`
+            : `<img src="${p.img}" alt="${p.title}" class="repo-img">`;
+
         modalBody.innerHTML = `
             <div class="repo-card">
-                <img src="${p.img}" alt="${p.title}" class="repo-img">
+                ${mediaHtml}
                 <h2 style="margin-bottom: 1rem;">${p.title}</h2>
                 <p style="color: #94a3b8; margin-bottom: 2rem; max-width: 500px;">${p.desc}</p>
                 <a href="${p.url}" target="_blank" class="launch-btn">View Source on GitHub</a>
