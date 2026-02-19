@@ -25,7 +25,6 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    touch-action: manipulation;
 }
 
 body.modal-open {
@@ -229,7 +228,8 @@ h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1p
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
     z-index: 1000; display: flex; justify-content: center; align-items: center;
-    opacity: 0; pointer-events: none; transition: opacity 0.3s,;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    overscroll-behavior: none;
 }
 .modal-overlay.open { opacity: 1; pointer-events: all; }
 
