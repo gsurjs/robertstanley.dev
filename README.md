@@ -1,20 +1,23 @@
-# Robert Stanley Homepage
+# Robert Stanley - Personal Portfolio
 
-A personal academic homepage showcasing my journey as a Computer Science student at Georgia State University.
+The source code for my personal website and professional portfolio. 
 
 ## Live Website
 **[View Live Site](https://robertstanley.dev)**
 
 ## About
 
-This is my personal homepage created for, and by, Robert Stanley. The site features a clean, professional design with a background image and showcases my academic work, personal projects, and interests.
+This repository contains the front-end code for my personal homepage. I built this site to serve as a central hub for my professional experience, project deployments, and technical background. 
 
-## Technologies Used
+Currently, I am working as a Field Product Guide and Technical Lead at Rivian, and I recently graduated Magna Cum Laude from Georgia State University with a B.S. in Computer Science. My broader technical work involves building resilient backend systems, integrating AI pipelines for robotics, and developing full-stack applications.
 
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Advanced styling with flexbox, grid, and responsive design
-- ***Javascript** - Powers the interactive features, including the dynamic navbar, smooth scrolling, and scroll-triggered animations.
-- **Background Effects** - Fixed background image with overlay effects
+## Site Architecture
+
+I designed this site to be lightweight, responsive, and fast without relying on heavy frontend frameworks. 
+
+- **HTML5** - Semantic structure and accessibility
+- **CSS3** - Custom styling featuring CSS grid, flexbox, and scroll-triggered fade animations
+- **JavaScript (Vanilla)** - Drives the interactive elements, including the dynamic terminal project explorer, modal windows, and form submissions
 
 ## Connect
 
@@ -22,7 +25,4 @@ This is my personal homepage created for, and by, Robert Stanley. The site featu
 - **GitHub**: [gsurjs](https://github.com/gsurjs)
 
 ---
-
-*Built with ❤️ by Robert Stanley '25 GSU Computer Science Grad*
-
-**Go Panthers! 🐾**
+Built by Robert Stanley.
